@@ -1,0 +1,262 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #fefefe;
+    color: #333;
+    line-height: 1.6;
+    padding: 20px;
+    transition: all 0.3s ease;
+}
+
+header, section, footer {
+    margin-bottom: 40px;
+    padding: 20px;
+    border-radius: 10px;
+    background-color: #f0f4f8;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+}
+
+/* Header styling */
+header {
+    text-align: center;
+    background-color: teal;
+    color: white;
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.2rem;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    margin: 0 10px;
+    color: white;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+nav a:hover {
+    text-decoration: underline;
+}
+
+#about {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+#about img {
+    border-radius: 50%;
+    border: 3px solid teal;
+}
+
+#skills ul {
+    list-style-type: square;
+    padding-left: 20px;
+    columns: 3; /* Split into 3 columns */
+}
+
+#projects article {
+    margin-bottom: 20px;
+    padding: 10px;
+    background-color: white;
+    border-left: 5px solid teal;
+}
+
+#contact a {
+    color: #0d6efd;
+    text-decoration: none;
+}
+
+#contact a:hover {
+    text-decoration: underline;
+}
+
+footer {
+    text-align: center;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+footer a {
+    color: #0d6efd;
+}
+
+#quote-box {
+    background-color: #f0f4f8;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    margin-top: 20px;
+}
+
+#new-quote {
+    margin-top: 15px;
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: teal;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+#new-quote:hover {
+    background-color: #006666;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+/* Button Styles */
+.toggle-btn {
+    background-color: transparent;
+    border: none;
+    font-size: 2rem;
+    cursor: pointer;
+    color: #333;
+    transition: all 0.3s ease;
+}
+
+/* Dark mode button color */
+.dark-mode .toggle-btn {
+    color: #f1f1f1;
+}
+
+.toggle-btn:hover {
+    color: #90cdf4;  /* Change hover color if desired */
+}
+
+/* === DARK MODE === */
+.dark-mode {
+    background-color: #121212;
+    color: #f1f1f1;
+}
+
+.dark-mode header {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+.dark-mode section {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+.dark-mode footer {
+    background-color: #1e1e1e;
+    color: #f1f1f1;
+}
+
+.dark-mode nav a {
+    color: #90cdf4;
+}
+
+.dark-mode nav a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+.dark-mode #skills ul {
+    color: #f1f1f1;
+}
+
+.dark-mode #projects article {
+    background-color: #2a2a2a;
+    border-left: 5px solid #90cdf4;
+}
+
+.dark-mode #contact a {
+    color: #90cdf4;
+}
+
+.dark-mode #contact a:hover {
+    color: #fff;
+    text-decoration: underline;
+}
+
+/* === FORM VALIDATION === */
+
+/* Base styles for form inputs */
+#contact input[type="email"],
+#contact input[type="tel"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    border: 1px solid #ccc; /* Reduced border thickness for a cleaner look */
+    border-radius: 4px;
+    box-sizing: border-box;
+    font-size: 1rem;
+    transition: border-color 0.3s ease;
+}
+
+#contact input[type="email"]:focus,
+#contact input[type="tel"]:focus {
+    border-color: #007bff;
+    outline: none;
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.25); /* Added a subtle focus shadow */
+}
+
+/* Styling for valid inputs */
+#contact input:valid {
+    border-color: #28a745; /* Green for valid input */
+}
+
+/* Styling for invalid inputs */
+#contact input:invalid {
+    border-color: #dc3545; /* Red for invalid input */
+}
+
+/* Styling for required fields (optional visual cue) */
+/* #contact input:required {
+    background-color: #fdf7e6;
+} */
+
+/* === RESPONSIVE STYLES === */
+@media (max-width: 768px) {
+    body {
+        padding: 10px;
+    }
+
+    header h1 {
+        font-size: 2rem;
+    }
+
+    header p {
+        font-size: 1rem;
+    }
+
+    nav {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    #about {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    #skills ul {
+        columns: 1; /* Stack skills instead of 3 columns */
+    }
+
+    #about img {
+        width: 100px;
+    }
+}
